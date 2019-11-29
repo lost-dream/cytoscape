@@ -1,0 +1,22 @@
+{
+  "name": "cytoscape-guide",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "dependencies": {
+    "vue": "^2.6.6"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "vue-template-compiler": "^2.6.10",
+    "vuepress": "^1.2.0"
+  }
+}
