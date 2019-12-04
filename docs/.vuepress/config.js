@@ -1,21 +1,13 @@
-function generateOption(id) {
-  return {
-    text: id,
-    link: `https://github.com/cytoscape/cytoscape.js/issues?q=milestone%3A${id}+is%3Aclosed`
-  }
-}
-
-function generateRelease(releaseId, releaseNum) {
+function generateRelease(text, releaseNum) {
   const items = []
-
   for (let index = releaseNum - 1; index > -1; index--) {
-    items.push(generateOption(releaseId + '.' + index))
+    const releaseId = text + '.' + index
+    items.push({
+      text: releaseId,
+      link: `https://github.com/cytoscape/cytoscape.js/issues?q=milestone%3A${releaseId}+is%3Aclosed`
+    })
   }
-
-  return {
-    text: releaseId,
-    items: items
-  }
+  return { text, items }
 }
 
 module.exports = {
@@ -30,6 +22,10 @@ module.exports = {
       {
         text: 'demo',
         link: '/demo/'
+      },
+      {
+        text: 'API',
+        link: '/api/'
       },
       {
         text: '历史版本',
@@ -62,23 +58,29 @@ module.exports = {
     sidebar: {
       '/guide/': [
         {
-          title: '',
+          title: '基础',
           collapsable: false,
           children: [
             'installation',
             '',
             'notation',
+          ]
+        },
+        {
+          title: '开始使用',
+          collapsable: false,
+          children: [
             'start'
           ]
         }
       ],
-      '/demo/': [
+      '/api/': [
         {
-          title: '开始使用111',
+          title: '',
           collapsable: false,
           children: [
-            'notation',
-            'start'
+            '',
+            'graph-manipulation'
           ]
         }
       ]

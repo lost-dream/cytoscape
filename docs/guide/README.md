@@ -2,7 +2,7 @@
 title: 介绍
 pageClass: custom-page-class
 ---
-## 简介
+## cytoscape.js是什么
 
 * 用原生JS编写的功能齐全的图形库
 * 核心Cytoscape.js库和所有第一方扩展的开放源代码许可（MIT）
@@ -47,4 +47,3 @@ pageClass: custom-page-class
     * 每月发布版本
   * 在[Zenodo](https://zenodo.org/record/3547834)列出了每个版本的DOI
   * 由[OMIC Tools](https://omictools.com/cytoscape-js-tool)列出
-
